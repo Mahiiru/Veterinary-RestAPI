@@ -18,12 +18,12 @@ public class OrderDetails {
 
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
 
     @ManyToOne
-    @JoinColumn(name = "order_id")
-    private Order order;
+    @JoinColumn(name = "user_order_id")
+    private UserOrder userOrder;
 
     @ManyToOne
     @JoinColumn(name = "product_id")

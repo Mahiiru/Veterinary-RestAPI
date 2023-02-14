@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/v1/UsersInfo")
+@RequestMapping("/api/v1/usersInfo")
 public class UserInfoController {
 
     @Autowired

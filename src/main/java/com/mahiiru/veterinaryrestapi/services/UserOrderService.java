@@ -1,8 +1,8 @@
 package com.mahiiru.veterinaryrestapi.services;
 
 
-import com.mahiiru.veterinaryrestapi.models.Order;
-import com.mahiiru.veterinaryrestapi.repositories.OrderRepository;
+import com.mahiiru.veterinaryrestapi.models.UserOrder;
+import com.mahiiru.veterinaryrestapi.repositories.UserOrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,16 +10,16 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class OrderService {
+public class UserOrderService {
 
     @Autowired
-    private OrderRepository repository;
+    private UserOrderRepository repository;
 
-    public List<Order> getAllOrders() {
+    public List<UserOrder> getAllOrders() {
         return repository.findAll();
     }
 
-    public Optional<Order> getOrderById(Long id) {
+    public Optional<UserOrder> getOrderById(Long id) {
         return repository.findById(id);
     }
 }
